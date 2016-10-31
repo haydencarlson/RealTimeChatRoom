@@ -4,7 +4,7 @@ class MessageList extends Component {
 
     return (
     <div id="message-list">
-      <div class="message system">
+      <div className="message system">
         Anonymous1 changed their name to nomnom.
       </div>
     </div>
