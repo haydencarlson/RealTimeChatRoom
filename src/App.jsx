@@ -48,6 +48,16 @@ class App extends Component {
       content: messageData.message}
     socket.send(newMessage);
   }
+  postNotification(username) {
+    const newName = username;
+    if (this.state.currentUser.name !== newName) {
+      const newNotification = {
+        content: `System: ${this.state.currentUser.name} changed their username to ${username}`
+      }
+      socket.emit('notification', newNotification);
+    }
+    this.setState({currentUser: {name: newName}})
+  }
 
   render() {
     return (
