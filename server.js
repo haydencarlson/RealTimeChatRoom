@@ -38,6 +38,10 @@ io.on('connection', client => {
     io.sockets.emit('message', data);
   })
 
+  client.on('notification', notificationData => {
+    console.log(notificationData);
+    io.sockets.emit('notification', notificationData)
+  })
 
   client.on('disconnect', client => {
     userCount -= 1;
