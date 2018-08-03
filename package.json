@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "react": "15.2.1",
-    "react-dom": "15.2.1",
+    "react-dom": "16.0.1",
     "socket.io": "^2.0.2",
     "snyk": "^1.42.6"
   },
